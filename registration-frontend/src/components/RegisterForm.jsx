@@ -69,9 +69,9 @@ const RegisterForm = () => {
             required
           />
         </div>
-        <ReCAPTCHA
-          sitekey="6LdfiVkqAAAAAFT7HpJAY6WVTtCSKYTb1U0Wnpjk"
-          onChange={() => setcapval()}
+    <ReCAPTCHA
+          sitekey="6LciVqwqAAAAAH6PdO1rYCkljfgsdrkGXXAbXNAT"
+          onChange={(value) => setCapVal(value)}
         />
         <input type="submit" value="Register" />
       </form>
