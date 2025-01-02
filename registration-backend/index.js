@@ -3,7 +3,7 @@ const JWT = require("jsonwebtoken");
 const mysql = require("mysql2");
 const bcrypt = require("bcryptjs");
 const salt = 11;
-const secretekey = "ArbazSaniyaForever";
+const secretekey = "SaniyaBagwan";
 const app = express();
 const port = 8625;
 const cors = require("cors");
@@ -11,7 +11,11 @@ const cors = require("cors");
 // Middleware for parsing JSON bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:["https://to-do-full-stack-backend.vercel.app"],
+  method:["POST","GET"],
+  credentials:true
+}));
 
 // Set up MySQL connection
 const db = mysql.createConnection({
