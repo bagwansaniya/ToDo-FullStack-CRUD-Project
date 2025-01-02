@@ -11,6 +11,8 @@ const cors = require("cors");
 // Middleware for parsing JSON bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
 app.use(cors({
   origin: "https://to-do-full-stack-crud-project-frontend.vercel.app", // Allow this specific origin
   methods: ["POST", "GET", "PUT", "DELETE"], // Include all required HTTP methods
@@ -18,6 +20,7 @@ app.use(cors({
   credentials: true // Allow cookies and other credentials
 }));
 
+app.options("*", cors());
 
 // Set up MySQL connection
 const db = mysql.createConnection({
