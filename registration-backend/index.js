@@ -12,10 +12,12 @@ const cors = require("cors");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-  origin:["https://to-do-full-stack-crud-project-frontend.vercel.app"],
-  method:["POST","GET"],
-  credentials:true
+  origin: "https://to-do-full-stack-crud-project-frontend.vercel.app", // Allow this specific origin
+  methods: ["POST", "GET", "PUT", "DELETE"], // Include all required HTTP methods
+  allowedHeaders: ["Content-Type", "Authorization"], // Include necessary headers
+  credentials: true // Allow cookies and other credentials
 }));
+
 
 // Set up MySQL connection
 const db = mysql.createConnection({
