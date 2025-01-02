@@ -17,7 +17,7 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8625/register", {
+      const response = await fetch("https://to-do-full-stack-backend.vercel.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
