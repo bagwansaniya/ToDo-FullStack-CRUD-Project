@@ -12,7 +12,7 @@ const cors = require("cors");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-  origin:["https://to-do-full-stack-backend.vercel.app"],
+  origin:["https://to-do-full-stack-crud-project-frontend.vercel.app"],
   method:["POST","GET"],
   credentials:true
 }));
