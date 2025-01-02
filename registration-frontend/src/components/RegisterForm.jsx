@@ -18,11 +18,13 @@ const RegisterForm = () => {
     e.preventDefault();
     try {
       const response = await fetch("https://to-do-full-stack-backend.vercel.app/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+});
+
       });
       const data = await response.json();
       if (response.ok) {
